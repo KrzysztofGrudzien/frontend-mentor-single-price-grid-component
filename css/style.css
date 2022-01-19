@@ -1,13 +1,15 @@
 :root {
     /* ------- COLORS ------- */
-    --color-primary: hsl(177, 68%, 64%);
-    --color-secondary: hsl(12, 94%, 65%);
-    --color-tertiary: hsl(33, 100%, 70%);
-    --color-text: hsl(20, 33%, 98%);
-    --color-text-dark: hsl(244, 23%, 12%);
+    --color-bg: hsl(205, 44%, 93%);
+    --color-primary: hsl(179, 62%, 43%);
+    --color-primary-light: hsl(179, 62%, 49%);
+    --color-secondary: hsl(71, 73%, 54%);
+    --color-text: hsl(218, 22%, 67%);
+    --color-text-light: hsl(0, 0%, 100%);
 
     /* ------- RADIUS ------- */
-    --radius: 8px;
+    --radius-8: 8px;
+    --radius-5: 5px;
 }
 
 /* ------- BASIC ------- */
@@ -40,9 +42,11 @@ ul {
 
 body {
     align-items: center;
+    background-color: var(--color-bg);
     display: flex;
     font-size: 1.6rem;
     font-weight: 400;
+    font-family: 'Karla', 'Arial', 'Helvetica', sans-serif;
     justify-content: center;
     min-height: 100vh;
 }
@@ -66,6 +70,92 @@ a:active {
 
 /* ------- CARD ------- */
 
+.card {
+    background-color: var(--color-text-light);
+    box-shadow: 0 15px 30px hsla(212, 100%, 33%, 0.149);
+    border-radius: var(--radius-8);
+    display: flex;
+    flex-direction: column;
+    margin: 0 3.2rem;
+    max-width: 311px;
+}
+
+.card__title {
+    color: var(--color-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 3rem 2.4rem;
+}
+
+.card__subtitle {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    padding: 0 2.4rem 2rem 2.4rem;
+}
+
+.card__description {
+    color: var(--color-text);
+    line-height: 2.6rem;
+    padding: 0 2.4rem;
+}
+
+.subscription {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    font-size: 1.4rem;
+    margin-top: 3rem;
+    padding: 0 2.4rem 2.4rem 2.4rem;
+}
+
+.subscription__price {
+    align-items: center;
+    display: flex;
+    font-size: 1.6rem;
+}
+
+.subscription__price > span {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-right: 1.5rem;
+}
+
+.subscription__link {
+    align-items: center;
+    background-color: var(--color-secondary);
+    box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.1);
+    border-radius: var(--radius-5);
+    color: var(--color-text-light);
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    line-height: 4.8rem;
+}
+
+.subscription__description {
+    font-size: 1.6rem;
+    padding: 0.8rem 0 3rem 0;
+}
+
+.subscription__title,
+.about__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 2.2rem 0;
+}
+
+.about {
+    background-color: var(--color-primary-light);
+    color: var(--color-text-light);
+    padding: 0 2.4rem 2.4rem 2.4rem;
+}
+
+.about__list-item {
+    font-size: 1.4rem;
+    opacity: 0.8;
+    padding: 0.2rem 0;
+}
 /* ------- PHONE ------- */
 
 /* ------- DESKTOP ------- */
